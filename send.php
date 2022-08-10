@@ -1,7 +1,7 @@
 <?php
 
 
-if (isset($_POST['number'])) {
+if (isset($_GET['number'])) {
 	include 'db_conn.php';
 
 	function validate($data){
@@ -11,7 +11,7 @@ if (isset($_POST['number'])) {
 	   return $data;
 	}
 
-	$number = validate($_POST['number']);
+	$number = validate($_GET['number']);
 
 	if ( empty($number)) {
 		header("Location: index.html");
